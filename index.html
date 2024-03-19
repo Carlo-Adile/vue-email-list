@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mail List</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Just a Mail list</h1>
+    <button @click="callApi">Generate Mails</button>
+    <div v-if="randomMails !== null">
+      <ul>
+        <li v-for="email in randomMails">
+          {{ email }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
